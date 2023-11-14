@@ -2,6 +2,9 @@
 
 :root {
 	--linkFontColor: #0d0d0d;
+	--bgColor: #2710d5;
+	--mainWidth: 620px;
+	--mainRadius: 476px;
 }
 
 /** PC、スマホ共通スタイル */
@@ -54,4 +57,43 @@ header {
 
 #nav-pc > a:active {
 	color: var(--linkFontColor);
+}
+
+/** main visual */
+#main-visual {
+	position: relative;
+	height: 400px;
+}
+
+#main-message {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: var(--bgColor);
+	color: white;
+	border-radius: 0 0 var(--mainRadius) 0;
+	max-width: var(--mainWidth);
+	height: 100%;
+	width: 100%;
+	z-index: 11;
+}
+
+#main-message > h1 {
+	font-size: 60px;
+	font-weight: bold;
+	margin: 100px 0 0 50px;
+}
+
+#main-message > p {
+	font-size: 28px;
+	margin: 0 0 0 50px;
+}
+
+#main-visual > img {
+	max-width: var(--mainWidth);
+	border-radius: var(--mainRadius) 0 0 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 10;
 }
