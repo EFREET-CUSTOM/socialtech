@@ -2,7 +2,7 @@
 
 :root {
 	--linkFontColor: #0d0d0d;
-	--bgColor: #2710d5;
+	--primaryColor: #2710d5;
 	--mainWidth: 620px;
 	--mainRadius: 476px;
 }
@@ -69,7 +69,7 @@ header {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-color: var(--bgColor);
+	background-color: var(--primaryColor);
 	color: white;
 	border-radius: 0 0 var(--mainRadius) 0;
 	max-width: var(--mainWidth);
@@ -134,4 +134,74 @@ h3 {
 #s2dgs {
 	margin-top: 50px;
 	width: 100%;
+}
+
+/** product */
+#product {
+	background-color: #fafafa;
+	margin: 80px auto;
+	padding: 10px 40px 0 40px;
+}
+
+#product > div {
+	margin-top: 40px;
+	display: flex;
+}
+
+#product-left {
+	width: 50%;
+	margin-right: 20px;
+}
+
+#product-right {
+	width: 50%;
+	margin-left: 20px;
+	margin-top: 80px;
+}
+
+#product-left > div {
+	position: relative;
+	height: 480px;
+	margin-right: 20px;
+}
+
+#product-right > div {
+	position: relative;
+	height: 480px;
+	margin-left: 20px;
+}
+
+.product-photo {
+	width: 100%;
+}
+
+.product-explain {
+	background-color: white;
+	position: absolute;
+	left: 0;
+	top: 280px;
+	margin: 0 40px;
+	padding: 20px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.product-explain > span {
+	color: var(--primaryColor);
+	font-weight: bold;
+	font-size: 16px;
+	margin: 0;
+}
+
+.product-explain > h3 {
+	font-size: 20px;
+	margin: 5px 0;
+}
+
+.product-explain > p {
+	font-size: 14px;
+	margin: 0;
+}
+
+#product-more {
+	margin: 0 auto -42px auto;
 }
