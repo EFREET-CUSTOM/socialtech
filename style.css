@@ -131,6 +131,7 @@ h3 {
 #mission-photo {
 	width: 100%;
 }
+
 #s2dgs {
 	margin-top: 50px;
 	width: 100%;
@@ -204,4 +205,49 @@ h3 {
 
 #product-more {
 	margin: 0 auto -42px auto;
+}
+
+/** about us */
+#aboutus {
+	margin: 80px auto;
+}
+
+#aboutus > div {
+	display: flex;
+}
+
+.culture-img {
+	width: 100%;
+	align-self: flex-start;
+}
+
+.culture-img2 {
+	width: 100%;
+	margin-top: 50px;
+}
+
+.culture-table {
+	margin-right: 50px;
+}
+
+.culture-num {
+	font-size: 80px;
+	color: var(--primaryColor);
+	margin: 0 20px 0 0;
+}
+
+.culture-en {
+	font-size: 24px;
+	color: var(--primaryColor);
+	font-weight: bold;
+	display: flex;
+}
+
+.culture-jp {
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.culture-description {
+	margin: 0;
 }
