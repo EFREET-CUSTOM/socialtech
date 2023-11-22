@@ -352,3 +352,64 @@ h3 {
 	border-top-width: var(--borderWidth);
 	border-top-style: solid;
 }
+
+/** contact */
+#contact {
+	margin: 80px auto;
+
+	:is(form) {
+		:is(div) {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			padding-bottom: 30px;
+		}
+	}
+}
+
+.contact-heading {
+	width: 240px;
+	align-self: center;
+}
+
+.contact-label {
+	font-weight: bold;
+}
+
+.contact-span {
+	color: #ce2222;
+	margin: 0 0 0 20px;
+	font-weight: bold;
+}
+
+.contact-textbox, .contact-textarea {
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom-width: var(--borderWidth);
+	border-bottom-color: #707070;
+	border-bottom-style: solid;
+	background-color: #fafafa;
+	width: 400px;
+}
+
+.contact-textbox {
+	height: 56px;
+}
+
+.contact-textarea {
+	height: 200px;
+}
+
+details {
+	width: 700px;
+
+	:is(div) {
+		background-color: #fafafa;
+		padding: 20px;
+
+		:is(span) {
+			font-weight: bold;
+		}
+	}
+}
