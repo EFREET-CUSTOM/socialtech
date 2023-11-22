@@ -5,6 +5,9 @@
 	--primaryColor: #2710d5;
 	--mainWidth: 620px;
 	--mainRadius: 476px;
+
+	--borderColor: #ececec;
+	--borderWidth: 1px;
 }
 
 /** PC、スマホ共通スタイル */
@@ -187,8 +190,8 @@ h3 {
 
 	:is(span) {
 		color: var(--primaryColor);
-		font-weight: bold;
 		font-size: 16px;
+		font-weight: bold;
 		margin: 0;
 	}
 
@@ -231,14 +234,14 @@ h3 {
 }
 
 .culture-num {
-	font-size: 80px;
 	color: var(--primaryColor);
+	font-size: 80px;
 	margin: 0 20px 0 0;
 }
 
 .culture-en {
-	font-size: 24px;
 	color: var(--primaryColor);
+	font-size: 24px;
 	font-weight: bold;
 	display: flex;
 }
@@ -326,26 +329,26 @@ h3 {
 	text-align: left;
 	padding: 20px;
 	border-bottom-color: var(--primaryColor);
-	border-bottom-width: 1px;
+	border-bottom-width: var(--borderWidth);
 	border-bottom-style: solid;
 	width: 100px;
 }
 
 .tableheader-first {
 	border-top-color: var(--primaryColor);
-	border-top-width: 1px;
+	border-top-width: var(--borderWidth);
 	border-top-style: solid;
 }
 
 .cell, .cell-first {
 	padding: 30px;
-	border-bottom-color: #ececec;
-	border-bottom-width: 1px;
+	border-bottom-color: var(--borderColor);
+	border-bottom-width: var(--borderWidth);
 	border-bottom-style: solid;
 }
 
 .cell-first {
-	border-top-color: #ececec;
-	border-top-width: 1px;
+	border-top-color: var(--borderColor);
+	border-top-width: var(--borderWidth);
 	border-top-style: solid;
 }
