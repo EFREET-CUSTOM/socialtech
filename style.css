@@ -35,34 +35,43 @@ header {
 	text-align: right;
 	font-size: 14px;
 	padding-top: 15px;
-}
 
-#nav-pc > a {
-	text-decoration: none;
-	margin-left: 20px;
-}
+	:is(a) {
+		text-decoration: none;
+		margin-left: 20px;
+	}
 
-#nav-pc > a:link {
-	color: var(--linkFontColor);
-}
+	:is(a:link) {
+		color: var(--linkFontColor);
+	}
 
-#nav-pc > a:visited {
-	color: var(--linkFontColor);
-}
+	:is(a:visited) {
+		color: var(--linkFontColor);
+	}
 
-#nav-pc > a:hover {
-	color: var(--linkFontColor);
-	text-decoration: underline;
-}
+	:is(a:hover) {
+		color: var(--linkFontColor);
+		text-decoration: underline;
+	}
 
-#nav-pc > a:active {
-	color: var(--linkFontColor);
+	:is(a:active) {
+		color: var(--linkFontColor);
+	}
 }
 
 /** main visual */
 #main-visual {
 	position: relative;
 	height: 400px;
+
+	:is(img) {
+		max-width: var(--mainWidth);
+		border-radius: var(--mainRadius) 0 0 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 10;
+	}
 }
 
 #main-message {
@@ -76,26 +85,17 @@ header {
 	height: 100%;
 	width: 100%;
 	z-index: 11;
-}
 
-#main-message > h1 {
-	font-size: 60px;
-	font-weight: bold;
-	margin: 100px 0 0 50px;
-}
+	:is(h1) {
+		font-size: 60px;
+		font-weight: bold;
+		margin: 100px 0 0 50px;
+	}
 
-#main-message > p {
-	font-size: 28px;
-	margin: 0 0 0 50px;
-}
-
-#main-visual > img {
-	max-width: var(--mainWidth);
-	border-radius: var(--mainRadius) 0 0 0;
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 10;
+	:is(p) {
+		font-size: 28px;
+		margin: 0 0 0 50px;
+	}
 }
 
 /** 見出し */
@@ -121,11 +121,11 @@ h3 {
 #mission-flex {
 	width: 100%;
 	display: flex;
-}
 
-#mission-flex > div {
-	width: 50%;
-	margin: 20px;
+	:is(div) {
+		width: 50%;
+		margin: 20px;
+	}
 }
 
 #mission-photo {
@@ -184,23 +184,23 @@ h3 {
 	margin: 0 40px;
 	padding: 20px;
 	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
-}
 
-.product-explain > span {
-	color: var(--primaryColor);
-	font-weight: bold;
-	font-size: 16px;
-	margin: 0;
-}
+	:is(span) {
+		color: var(--primaryColor);
+		font-weight: bold;
+		font-size: 16px;
+		margin: 0;
+	}
 
-.product-explain > h3 {
-	font-size: 20px;
-	margin: 5px 0;
-}
+	:is(h3) {
+		font-size: 20px;
+		margin: 5px 0;
+	}
 
-.product-explain > p {
-	font-size: 14px;
-	margin: 0;
+	:is(p) {
+		font-size: 14px;
+		margin: 0;
+	}
 }
 
 #product-more {
@@ -210,10 +210,10 @@ h3 {
 /** about us */
 #aboutus {
 	margin: 80px auto;
-}
 
-#aboutus > div {
-	display: flex;
+	:is(div) {
+		display: flex;
+	}
 }
 
 .culture-img {
@@ -269,40 +269,40 @@ h3 {
 	height: 300px;
 	margin-bottom: 30px;
 	position: relative;
-}
 
-.vision-box > img {
-	width: 100%;
-	height: auto;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 30;
-}
+	:is(img) {
+		width: 100%;
+		height: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 30;
+	}
 
-.vision-box > span {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 31;
-	margin-right: 20px;
-}
+	:is(span) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 31;
+		margin-right: 20px;
 
-.vision-box > span > h4 {
-	color: var(--primaryColor);
-	font-size: 19px;
-	margin-top: 80px;
-}
+		:is(h4) {
+			color: var(--primaryColor);
+			font-size: 19px;
+			margin: 80px 0 0 0;
+		}
 
-.vision-box > span > h4::first-letter {
-	font-size: 40px;
-}
+		& h4::first-letter {
+			font-size: 40px;
+		}
 
-.vision-box > span > h5 {
-	font-size: 20px;
-	margin: 0;
-}
+		:is(h5) {
+			font-size: 20px;
+			margin: 0;
+		}
 
-.vision-box > span > p {
-	margin-top: 10px;
+		:is(p) {
+			margin-top: 10px;
+		}
+	}
 }
