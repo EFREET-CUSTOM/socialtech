@@ -104,11 +104,11 @@ header {
 /** 見出し */
 h2 {
 	margin-top: 40px;
-}
 
-h2::after {
-	content:  url("images/line.png");
-	margin-left: 10px;
+	&::after {
+		content:  url("images/line.png");
+		margin-left: 10px;
+	}
 }
 
 h3 {
