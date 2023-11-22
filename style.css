@@ -289,14 +289,14 @@ h3 {
 		z-index: 31;
 		margin-right: 20px;
 
-		:is(h4) {
+		:is(h4) {			
 			color: var(--primaryColor);
 			font-size: 19px;
 			margin: 80px 0 0 0;
-		}
 
-		& h4::first-letter {
-			font-size: 40px;
+			&::first-letter {
+				font-size: 40px;
+			}
 		}
 
 		:is(h5) {
