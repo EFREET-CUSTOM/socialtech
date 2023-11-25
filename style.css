@@ -49,21 +49,13 @@ header {
 		margin-left: 20px;
 	}
 
-	:is(a:link) {
-		color: var(--linkFontColor);
-	}
-
-	:is(a:visited) {
+	:is(a:link, a:visited, a:active) {
 		color: var(--linkFontColor);
 	}
 
 	:is(a:hover) {
 		color: var(--linkFontColor);
 		text-decoration: underline;
-	}
-
-	:is(a:active) {
-		color: var(--linkFontColor);
 	}
 }
 
