@@ -377,14 +377,16 @@ h3 {
 	align-self: center;
 }
 
-.contact-label {
+.contact-label, .contact-label-required {
 	font-weight: bold;
 }
 
-.contact-span {
-	color: #ce2222;
-	margin: 0 0 0 20px;
-	font-weight: bold;
+.contact-label-required {
+	&::after {
+		content: "必須";
+		color: #ce2222;
+		margin: 0 0 0 20px;
+	}
 }
 
 .contact-textbox, .contact-textarea {
