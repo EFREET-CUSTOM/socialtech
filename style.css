@@ -150,34 +150,34 @@ h3 {
 	background-color: var(--secondaryBGColor);
 	margin: var(--gutter) auto;
 	padding: 10px 40px 0 40px;
-}
 
-#product > div {
-	margin-top: 40px;
-	display: flex;
+	> :is(div) {
+		margin-top: calc(var(--gutter) / 2);
+		display: flex;
+	}
 }
 
 #product-left {
 	width: 50%;
 	margin-right: 20px;
+
+	> :is(div) {
+		position: relative;
+		height: 480px;
+		margin-right: 20px;
+	}
 }
 
 #product-right {
 	width: 50%;
 	margin-left: 20px;
 	margin-top: var(--gutter);
-}
 
-#product-left > div {
-	position: relative;
-	height: 480px;
-	margin-right: 20px;
-}
-
-#product-right > div {
-	position: relative;
-	height: 480px;
-	margin-left: 20px;
+	> :is(div) {
+		position: relative;
+		height: 480px;
+		margin-left: 20px;
+	}
 }
 
 .product-photo {
@@ -363,7 +363,7 @@ h3 {
 	margin: var(--gutter) auto;
 
 	:is(form) {
-		:is(div) {
+		> :is(div) {
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
