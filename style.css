@@ -412,3 +412,49 @@ details {
 		}
 	}
 }
+
+/** footer */
+footer {
+	--primaryBGColor: #0d0d0d;
+	--linkFontColor: white;
+
+	background-color: var(--primaryBGColor);
+	text-align: center;
+	padding: var(--gutter) var(--gutter) 30px var(--gutter);
+
+	#footer-logo {
+		margin-bottom: 30px;
+	}
+	
+	#footer-link {
+		margin-bottom: 50px;
+	
+		> :is(a) {
+			text-decoration: none;
+			margin: 10px;
+		}
+	
+		> :is(a:link, a:visited, a:active) {
+			color: var(--linkFontColor);
+		}
+	
+		> :is(a:hover) {
+			color: var(--linkFontColor);
+			text-decoration: underline;
+		}
+	}
+
+	#sns-footer {
+		text-align: left;
+		width: 100%;
+
+		> :is(a) {
+			margin-right: 30px;
+		}
+	}
+
+	#copyright {
+		color: var(--linkFontColor);
+		float: right;
+	}
+}
