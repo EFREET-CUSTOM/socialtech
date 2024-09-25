@@ -25,7 +25,7 @@ p {
 }
 
 /** PC用のスタイル */
-@media screen  and (min-width: 768px) {
+@media screen and (min-width: 768px) {
 	body {
 		max-width: 1080px;
 		min-width: 960px;
@@ -56,6 +56,11 @@ p {
 			color: var(--linkFontColor);
 			text-decoration: underline;
 		}
+	}
+
+	/** スマホ用ナビを非表示 */
+	#nav-sp, #menu-sp {
+		display:none;
 	}
 
 	/** main visual */
@@ -466,12 +471,136 @@ p {
 		margin: 0;
 	}
 
+	/** PC用ナビを非表示 */
 	#nav-pc {
 		display: none;
 	}
 
+	/** ハンバーガーメニュー */
 	#menu-sp {
 		float: right;
 		padding: 0;
+	}
+
+	/** スマホ用ナビの表示切替(初期状態、レイアウトと非表示設定 */
+	#nav-sp {
+		background-color: var(--primaryColor);
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		display: none;
+		z-index: 100;
+
+		/** ナビゲーションのリンクの装飾設定 */
+		:is(a) {
+			display: block;
+		}
+
+		:is(a:link, a:visited, a:active) {
+			color: white;
+		}
+
+		:is(a:hover) {
+			color: white;
+			text-decoration: underline;
+		}
+
+		.menu {
+			text-decoration: none;
+			display: block;
+			margin: 0 20px 0 20px;
+			height: 44px;
+			font-size: 16px;
+			background-image: url("images/arrow.png");
+			background-repeat: no-repeat;
+			background-position: right top;
+		}
+	}
+
+	#close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+
+	#logo-sp {
+		margin: 80x 0 30px 20px;
+	}
+
+	#sns {
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+
+		a {
+			margin-right: 30px;
+		}
+	}
+
+	/** main visual */
+	#main-visual {
+		position: relative;
+		height: 470px;
+		width: 100%;
+		overflow: hidden;
+
+		div {
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: var(--primaryColor);
+			color: white;
+			border-radius: 0 0 476px 0;
+			text-align: center;
+			height: 280px;
+			width: 100%;
+			z-index: 11;
+
+			h1 {
+				font-size: 28px;
+				margin: 90px 0 0 0;
+			}
+
+			p {
+				margin: 0;
+			}
+		}
+
+		img {
+			width: 100%;
+			border-radius: 476px 0 0 0;
+			z-index: 10;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+	}
+
+	/** 見出し */
+	h2 {
+		&::after {
+			content: url("images/line.png");
+			margin-left: 10px;
+		}
+	}
+
+	h3 {
+		font-size: 24px;
+		margin: 10px 0 0 0;
+	}
+
+	/** mission */
+	#mission {
+		margin: 20px;
+
+		#mission-photo {
+			width: 100%;
+		}
+
+		#s2dgs {
+			width: 100%;
+		}
 	}
 }
